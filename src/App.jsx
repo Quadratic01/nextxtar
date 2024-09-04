@@ -4,7 +4,9 @@ function App() {
 
 
   return (
-    <Home />
+    <div className="min-h-screen w-full overflow-hidden bg-black-100">
+      <Home />
+    </div>
   )
 }
 
