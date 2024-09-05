@@ -1,5 +1,6 @@
 import { heros, logos } from "../assets/images";
 import Button from "../components/buttons/button";
+import PlayLists from "../components/landing/playlists";
 import Nav from "../components/navigation/nav";
 
 
@@ -8,7 +9,7 @@ const Home = () => {
         <>
       <Nav />
       <div className="w-full min-h-screen">
-        <div style={{ backgroundImage: `url(${heros.mainHero})`, backgroundSize: "cover"}}  className="pt-[100px] w-full px-16">
+        <div style={{ backgroundImage: `url(${heros.mainHero})`, backgroundSize: "cover"}}  className="pt-[100px] pb-20 w-full px-16">
           <h1 className="mt-[150px] text-[80px] text-white text-center font-extrabold">We are all about The Music</h1>
           <p className="mt-4 text-[32px] text-white font-medium text-center">Stream and download the music of your favourite artists.</p>
           <div className="mt-[150px] mx-auto flex gap-10 w-fit">
@@ -37,7 +38,7 @@ const Home = () => {
         </div>
 
       </div>
-      <div className="w-full py-24 px-20 h-[850px] relative flex justify-between">
+      <div className="w-full py-24 px-16 h-[850px] relative flex justify-between">
         <img className="absolute bottom-0 left-[calc((100%-800px)/2)] w-[800px]" src={heros.hero2} alt="" />
         <div className="h-full">
           <div className="max-w-[508px] rounded-lg px-6 py-12 bg-[#121212] space-y-3 text-white">
@@ -52,6 +53,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <PlayLists />
     </>
      );
 }
