@@ -1,7 +1,8 @@
-import { heros, logos } from "../assets/images";
+import { heros, logos, pictures } from "../assets/images";
 import Button from "../components/buttons/button";
 import PlayLists from "../components/landing/playlists";
 import Nav from "../components/navigation/nav";
+import StoreButtons from "../components/storeButtons";
 
 
 const Home = () => {
@@ -13,20 +14,7 @@ const Home = () => {
           <h1 className="mt-[150px] text-[80px] text-white text-center font-extrabold">We are all about The Music</h1>
           <p className="mt-4 text-[32px] text-white font-medium text-center">Stream and download the music of your favourite artists.</p>
           <div className="mt-[150px] mx-auto flex gap-10 w-fit">
-            <div className="bg-black-100 rounded-md py-1 px-4 flex gap-3 text-white items-center">
-                <div><img width={32} height={32} src={logos.apple} alt="" /></div>
-                <div>
-                    <span className="text-xs">Download on the</span>
-                    <h4 className="text-xl font-medium">App store</h4>
-                </div>
-            </div>
-            <div className="bg-black-100 rounded-md py-1 px-4 flex gap-3 text-white items-center">
-                <div><img width={32} height={32} src={logos.apple} alt="" /></div>
-                <div>
-                    <span className="text-xs">Get it on</span>
-                    <h4 className="text-xl font-medium">Google Play</h4>
-                </div>
-            </div>
+            <StoreButtons />
           </div>
           
           <div className="mt-[100px]">
@@ -54,6 +42,38 @@ const Home = () => {
         </div>
       </div>
       <PlayLists />
+      <div className="w-full p-16 flex gap-[180px] text-white items-center justify-center">
+        <div className="w-[592px]">
+          <h2 className="text-[42px] font-semibold">Download and listen to your favourite songs and artists with NextXtar</h2>
+          <p className="text-lg mb-4">NextXtar is available on Web, iOS and Android for download</p>
+          <StoreButtons />
+        </div>
+        <div className="w-full max-w-[536px]">
+          <img src={pictures.iphone} alt="" className="w-full" />
+        </div>
+      </div>
+      <div className="p-16 w-full flex text-white">
+        <div className="mx-auto max-w-[1200px] px-12 py-16 rounded-[20px] bg-[#121212] w-full space-y-10 relative">
+          <img src={pictures.gallery} className="right-0 bottom-0 absolute w-[501px] object-scale-down" alt="" />
+          <div className="w-[571px]">
+            <h2 className="text-[32px] font-semibold">Subscribe to our Monthly Newsletter for Updates and Promos</h2>
+            <div className="flex gap-4">
+              <input type="text" className="bg-white rounded-md p-3 outline-none border-none text-center w-[300px]" placeholder="Enter your email address"/>
+              <Button>Subscribe</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full p-16 flex gap-[180px] text-white items-center justify-center">
+      <div className="w-full max-w-[536px]">
+          <img src={pictures.singer} alt="" className="w-full" />
+        </div>
+        <div className="w-[592px]">
+          <h2 className="text-[42px] font-semibold">Get in Touch with Us</h2>
+          <p className="text-lg mb-4">To be always updated with all our activities, you can follow us and subscribe on all our social media platforms by visiting our contact page</p>
+          <Button size="large" variant="secondary" >Visit Our Contact Page</Button>
+        </div>
+      </div>
     </>
      );
 }
